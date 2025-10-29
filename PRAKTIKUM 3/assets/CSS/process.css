@@ -1,0 +1,79 @@
+/* === process.css === */
+body {
+  background: #0f1419;
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.summary-card {
+  background: #1a1f25;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+  max-width: 800px;
+  width: 90%;
+}
+
+.summary-card h1 {
+  text-align: center;
+  color: #ffd369;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.image img {
+  width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #ffd369;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+
+.info .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00adb5;
+}
+
+.info p {
+  margin-bottom: 8px;
+}
+
+.back-btn {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  text-decoration: none;
+  background: #ffd369;
+  color: #1a1f25;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
