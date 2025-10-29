@@ -1,0 +1,85 @@
+body {
+  background-color: lightblue;
+  font-family: Lucida Sans, Verdana, sans-serif;
+}
+main {
+  width: 70%;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  color: blueviolet;
+}
+p {
+  text-align: center;
+  width: fit-content;
+}
+.center {
+  width: 30%;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.foto {
+  background-color: black;
+}
+.foto img {
+  width: 23%;
+}
+span {
+  font-weight: bolder;
+}
+
+.cod {
+  margin: auto;
+  width: 80%;
+}
+.cod p {
+  background-color: aqua;
+  border: 1px dotted red;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  margin: auto;
+}
+.promo {
+  text-align: center;
+  color: red;
+}
+.button {
+  text-align: center;
+}
+button {
+  background-color: orange;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color: rgba(255, 166, 0, 0.695);
+  transition: 0.2s;
+  cursor: pointer;
+}
+table {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid rgb(83, 83, 162);
+}
+th,
+td {
+  text-align: center;
+  padding: 3px 20px;
+  border: 1px solid rgb(138, 138, 158);
+}
+th {
+  background-color: rgb(83, 83, 162);
+  color: white;
+}
+.ganjil {
+  background-color: rgb(180, 223, 223);
+}
+.genap {
+  background-color: aliceblue;
+}
+
