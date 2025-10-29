@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas-3</title>
+  <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>  
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Generate Link</a></li>
+        <li><a href="#">Transaction History</a></li>
+        <li><a href="#">Policy</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="box1">
+      <div class="image">
+        <img src="assets/img/anonymous.webp" alt="Profile Preview" /> 
+      </div>
+      <div class="upload">
+        <form action="process.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="user_image" id="user_image" accept="image/*" />
+        </form>
+      </div>
+    </div>
+
+    <div class="box2">
+      <form action="process.php" method="post">
+        <div class="titleBox">
+          <label for="title">Title Here:</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+
+        <div class="priceBox">
+          <label for="price">Price: </label>
+          <input type="text" name="price" id="price" required>
+        </div>
+
+        <div class="descBox">
+          <label for="description">Description:</label>
+          <textarea name="description" id="description" rows="4" required></textarea>
+        </div>
+
+        <div class="accNumBox">
+          <label for="account_number">Account Number:</label>
+          <input type="text" name="account_number" id="account_number" required />
+        </div>
+
+        <div class="bankBox">
+          <label for="bank">Bank:</label>
+          <select name="bank" id="bank" required>
+            <option value="">--Select Bank--</option>
+            <option value="BCA">BCA</option>
+            <option value="Mandiri">Mandiri</option>
+            <option value="BRI">BRI</option>
+            <option value="Seabank">Seabank</option>
+          </select>
+        </div>
+
+        <div class="accHoldBox">
+          <label for="account_holder">Account Holder:</label>
+          <input type="text" name="account_holder" id="account_holder" required />
+        </div>
+
+        <div class="transBox">
+          <label for="transaction_count">Transaction:</label>
+          <input type="number" name="transaction_count" id="transaction_count" min="1" max="10" required />
+        </div>
+
+        <p>*If the transaction is for 3 persons, choose 3 from the dropdown list.</p>
+
+        <div class="send">
+          <label><input type="checkbox" name="send_to_mobile" value="yes" /> Send to Mobile Phone</label><br>
+          <label><input type="checkbox" name="send_to_email" value="yes" /> Send to Email</label>
+        </div>
+
+        <div class="mobileBox">
+          <label for="mobile_number">Send to Mobile Phone:</label>
+          <input type="text" name="mobile_number" id="mobile_number" placeholder="e.g., 08123456789" />
+        </div>
+
+        <div class="emailBox">
+          <label for="email_address">Send to Email:</label>
+          <input type="email" name="email_address" id="email_address" placeholder="example@email.com" />
+        </div>
+
+        <div class="submit">
+          <button type="submit" name="generate_link">Generate Link</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script>
+    const fileInput = document.getElementById('user_image');
+    const previewDiv = document.createElement('div');
+  previewDiv.classList.add('preview');
+    const previewImg = document.createElement('img');
+  previewDiv.appendChild(previewImg);
+  
+  fileInput.parentNode.appendChild(previewDiv);
+
+  fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          previewImg.src = e.target.result;
+          previewImg.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+</body>
+
+</html>
